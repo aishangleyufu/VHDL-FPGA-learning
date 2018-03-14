@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sat Jan 01 01:20:02 2011
+Quartus II Version : 7.2 Build 151 09/26/2007 SJ Full Version
+Revision Name : fsm
+Top-level Entity Name : fsm
+Family : Cyclone II
+Device : EP2C70F896C6
+Timing Models : Final
+Total logic elements : 15 / 68,416 ( < 1 % )
+    Total combinational functions : 15 / 68,416 ( < 1 % )
+    Dedicated logic registers : 4 / 68,416 ( < 1 % )
+Total registers : 4
+Total pins : 12 / 622 ( 2 % )
+Total virtual pins : 0
+Total memory bits : 0 / 1,152,000 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 300 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

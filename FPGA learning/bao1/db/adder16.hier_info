@@ -1,0 +1,230 @@
+|adder16
+CLK => tflip:TA15.CLK
+CLK => tflip:TA14.CLK
+CLK => tflip:TA13.CLK
+CLK => tflip:TA12.CLK
+CLK => tflip:TA11.CLK
+CLK => tflip:TA10.CLK
+CLK => tflip:TA9.CLK
+CLK => tflip:TA8.CLK
+CLK => tflip:TA7.CLK
+CLK => tflip:TA6.CLK
+CLK => tflip:TA5.CLK
+CLK => tflip:TA4.CLK
+CLK => tflip:TA3.CLK
+CLK => tflip:TA2.CLK
+CLK => tflip:TA1.CLK
+CLK => tflip:TA0.CLK
+CLR => tflip:TA15.CLR
+CLR => tflip:TA14.CLR
+CLR => tflip:TA13.CLR
+CLR => tflip:TA12.CLR
+CLR => tflip:TA11.CLR
+CLR => tflip:TA10.CLR
+CLR => tflip:TA9.CLR
+CLR => tflip:TA8.CLR
+CLR => tflip:TA7.CLR
+CLR => tflip:TA6.CLR
+CLR => tflip:TA5.CLR
+CLR => tflip:TA4.CLR
+CLR => tflip:TA3.CLR
+CLR => tflip:TA2.CLR
+CLR => tflip:TA1.CLR
+CLR => tflip:TA0.CLR
+ENA => tflip:TA0.TT
+ENA => T~0.IN1
+ENA => T[0].DATAIN
+T[0] <= ENA.DB_MAX_OUTPUT_PORT_TYPE
+T[1] <= T~0.DB_MAX_OUTPUT_PORT_TYPE
+T[2] <= T~1.DB_MAX_OUTPUT_PORT_TYPE
+T[3] <= T~2.DB_MAX_OUTPUT_PORT_TYPE
+T[4] <= T~3.DB_MAX_OUTPUT_PORT_TYPE
+T[5] <= T~4.DB_MAX_OUTPUT_PORT_TYPE
+T[6] <= T~5.DB_MAX_OUTPUT_PORT_TYPE
+T[7] <= T~6.DB_MAX_OUTPUT_PORT_TYPE
+T[8] <= T~7.DB_MAX_OUTPUT_PORT_TYPE
+T[9] <= T~8.DB_MAX_OUTPUT_PORT_TYPE
+T[10] <= T~9.DB_MAX_OUTPUT_PORT_TYPE
+T[11] <= T~10.DB_MAX_OUTPUT_PORT_TYPE
+T[12] <= T~11.DB_MAX_OUTPUT_PORT_TYPE
+T[13] <= T~12.DB_MAX_OUTPUT_PORT_TYPE
+T[14] <= T~13.DB_MAX_OUTPUT_PORT_TYPE
+T[15] <= T~14.DB_MAX_OUTPUT_PORT_TYPE
+Q[0] <= tflip:TA0.Q
+Q[1] <= tflip:TA1.Q
+Q[2] <= tflip:TA2.Q
+Q[3] <= tflip:TA3.Q
+Q[4] <= tflip:TA4.Q
+Q[5] <= tflip:TA5.Q
+Q[6] <= tflip:TA6.Q
+Q[7] <= tflip:TA7.Q
+Q[8] <= tflip:TA8.Q
+Q[9] <= tflip:TA9.Q
+Q[10] <= tflip:TA10.Q
+Q[11] <= tflip:TA11.Q
+Q[12] <= tflip:TA12.Q
+Q[13] <= tflip:TA13.Q
+Q[14] <= tflip:TA14.Q
+Q[15] <= tflip:TA15.Q
+C0[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+C0[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+C0[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+C0[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+C0[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+C0[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+C0[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+C0[7] <= <VCC>
+C1[0] <= Mux13.DB_MAX_OUTPUT_PORT_TYPE
+C1[1] <= Mux12.DB_MAX_OUTPUT_PORT_TYPE
+C1[2] <= Mux11.DB_MAX_OUTPUT_PORT_TYPE
+C1[3] <= Mux10.DB_MAX_OUTPUT_PORT_TYPE
+C1[4] <= Mux9.DB_MAX_OUTPUT_PORT_TYPE
+C1[5] <= Mux8.DB_MAX_OUTPUT_PORT_TYPE
+C1[6] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+C1[7] <= <VCC>
+C2[0] <= Mux20.DB_MAX_OUTPUT_PORT_TYPE
+C2[1] <= Mux19.DB_MAX_OUTPUT_PORT_TYPE
+C2[2] <= Mux18.DB_MAX_OUTPUT_PORT_TYPE
+C2[3] <= Mux17.DB_MAX_OUTPUT_PORT_TYPE
+C2[4] <= Mux16.DB_MAX_OUTPUT_PORT_TYPE
+C2[5] <= Mux15.DB_MAX_OUTPUT_PORT_TYPE
+C2[6] <= Mux14.DB_MAX_OUTPUT_PORT_TYPE
+C2[7] <= <VCC>
+C3[0] <= Mux27.DB_MAX_OUTPUT_PORT_TYPE
+C3[1] <= Mux26.DB_MAX_OUTPUT_PORT_TYPE
+C3[2] <= Mux25.DB_MAX_OUTPUT_PORT_TYPE
+C3[3] <= Mux24.DB_MAX_OUTPUT_PORT_TYPE
+C3[4] <= Mux23.DB_MAX_OUTPUT_PORT_TYPE
+C3[5] <= Mux22.DB_MAX_OUTPUT_PORT_TYPE
+C3[6] <= Mux21.DB_MAX_OUTPUT_PORT_TYPE
+C3[7] <= <VCC>
+L0[0] <= tflip:TA0.Q
+L0[1] <= tflip:TA1.Q
+L0[2] <= tflip:TA2.Q
+L0[3] <= tflip:TA3.Q
+L1[0] <= tflip:TA4.Q
+L1[1] <= tflip:TA5.Q
+L1[2] <= tflip:TA6.Q
+L1[3] <= tflip:TA7.Q
+L2[0] <= tflip:TA8.Q
+L2[1] <= tflip:TA9.Q
+L2[2] <= tflip:TA10.Q
+L2[3] <= tflip:TA11.Q
+L3[0] <= tflip:TA12.Q
+L3[1] <= tflip:TA13.Q
+L3[2] <= tflip:TA14.Q
+L3[3] <= tflip:TA15.Q
+
+
+|adder16|tflip:TA0
+CLK => Q~reg0.CLK
+CLR => Q~reg0.ACLR
+TT => Q~reg0.ENA
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder16|tflip:TA1
+CLK => Q~reg0.CLK
+CLR => Q~reg0.ACLR
+TT => Q~reg0.ENA
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder16|tflip:TA2
+CLK => Q~reg0.CLK
+CLR => Q~reg0.ACLR
+TT => Q~reg0.ENA
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder16|tflip:TA3
+CLK => Q~reg0.CLK
+CLR => Q~reg0.ACLR
+TT => Q~reg0.ENA
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder16|tflip:TA4
+CLK => Q~reg0.CLK
+CLR => Q~reg0.ACLR
+TT => Q~reg0.ENA
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder16|tflip:TA5
+CLK => Q~reg0.CLK
+CLR => Q~reg0.ACLR
+TT => Q~reg0.ENA
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder16|tflip:TA6
+CLK => Q~reg0.CLK
+CLR => Q~reg0.ACLR
+TT => Q~reg0.ENA
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder16|tflip:TA7
+CLK => Q~reg0.CLK
+CLR => Q~reg0.ACLR
+TT => Q~reg0.ENA
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder16|tflip:TA8
+CLK => Q~reg0.CLK
+CLR => Q~reg0.ACLR
+TT => Q~reg0.ENA
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder16|tflip:TA9
+CLK => Q~reg0.CLK
+CLR => Q~reg0.ACLR
+TT => Q~reg0.ENA
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder16|tflip:TA10
+CLK => Q~reg0.CLK
+CLR => Q~reg0.ACLR
+TT => Q~reg0.ENA
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder16|tflip:TA11
+CLK => Q~reg0.CLK
+CLR => Q~reg0.ACLR
+TT => Q~reg0.ENA
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder16|tflip:TA12
+CLK => Q~reg0.CLK
+CLR => Q~reg0.ACLR
+TT => Q~reg0.ENA
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder16|tflip:TA13
+CLK => Q~reg0.CLK
+CLR => Q~reg0.ACLR
+TT => Q~reg0.ENA
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder16|tflip:TA14
+CLK => Q~reg0.CLK
+CLR => Q~reg0.ACLR
+TT => Q~reg0.ENA
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|adder16|tflip:TA15
+CLK => Q~reg0.CLK
+CLR => Q~reg0.ACLR
+TT => Q~reg0.ENA
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

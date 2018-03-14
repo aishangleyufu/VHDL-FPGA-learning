@@ -1,0 +1,147 @@
+LIBRARY ieee; 
+USE ieee.std_logic_1164.all;
+USE ieee.std_logic_signed.all;
+ENTITY proc IS
+PORT ( DIN : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+Resetn, Clock, Run : IN STD_LOGIC;
+Done : BUFFER STD_LOGIC;
+BusWires : BUFFER STD_LOGIC_VECTOR(15 DOWNTO 0));
+END proc;
+
+
+
+ARCHITECTURE Behavior OF proc IS
+--. . . declare components
+COMPONENT upcount IS
+PORT ( Clear, Clock : IN STD_LOGIC;
+Q : OUT STD_LOGIC_VECTOR(1 DOWNTO 0));
+END COMPONENT;
+
+COMPONENT dec3to8 IS
+PORT ( W : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+En : IN STD_LOGIC;
+Y : OUT STD_LOGIC_VECTOR(0 TO 7));
+END COMPONENT;
+
+COMPONENT regn IS
+GENERIC (n : INTEGER := 16);
+PORT ( R : IN STD_LOGIC_VECTOR(n-1 DOWNTO 0);
+Rin, Clock : IN STD_LOGIC;
+Q : BUFFER STD_LOGIC_VECTOR(n-1 DOWNTO 0));
+END COMPONENT;
+
+COMPONENT mux IS
+PORT ( ROUT:IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+        GOUT,DINOUT: IN STD_LOGIC;
+        R0,R1,R2,R3,R4,R5,R6,R7,G,DIN:IN STD_LOGIC_VECTOR(15 DOWNTO 0);  
+        BUSWIRES : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+        CLOCK:IN STD_LOGIC
+        );
+END COMPONENT;
+
+COMPONENT ALU IS
+PORT ( ADDSUB:IN STD_LOGIC;
+RESULT:OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+A,B:IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+CLOCK:IN STD_LOGIC
+);
+END COMPONENT;
+
+
+component regnl IS
+GENERIC (n : INTEGER := 9);
+PORT ( R : IN STD_LOGIC_VECTOR(n-1 DOWNTO 0);
+Rin, Clock : IN STD_LOGIC;
+Q : BUFFER STD_LOGIC_VECTOR(n-1 DOWNTO 0));
+END component;
+
+--. . . declare signals
+SIGNAL CLEAR:STD_LOGIC;
+SIGNAL IRIN,ADDSUB,AIN,GIN:STD_LOGIC;
+SIGNAL I:STD_LOGIC_VECTOR(2 DOWNTO 0);
+SIGNAL RIN,ROUT:STD_LOGIC_VECTOR(7 DOWNTO 0);     
+SIGNAL DINOUT,GOUT:STD_LOGIC;
+SIGNAL Tstep_Q:STD_LOGIC_VECTOR(1 DOWNTO 0);
+SIGNAL Xreg,Yreg:STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL RESULT,R0,R1,R2,R3,R4,R5,R6,R7,A,G:STD_LOGIC_VECTOR(15 DOWNTO 0);
+SIGNAL HIGH1 :STD_LOGIC;
+SIGNAL IR:STD_LOGIC_VECTOR(8 DOWNTO 0);
+
+BEGIN
+High1<='1';
+Clear <= DONE;  --. . .
+Tstep: upcount PORT MAP (Clear, Clock, Tstep_Q);
+I <= IR(8 DOWNTO 6);
+decX: dec3to8 PORT MAP (IR(5 DOWNTO 3), High1, Xreg);
+decY: dec3to8 PORT MAP (IR(2 DOWNTO 0), High1, Yreg);
+reg_0: regn PORT MAP (BusWires, Rin(0), Clock, R0);
+reg_1: regn PORT MAP (BusWires, Rin(1), Clock, R1);
+reg_2: regn PORT MAP (BusWires, Rin(2), Clock, R2);
+reg_3: regn PORT MAP (BusWires, Rin(3), Clock, R3);
+reg_4: regn PORT MAP (BusWires, Rin(4), Clock, R4);
+reg_5: regn PORT MAP (BusWires, Rin(5), Clock, R5);
+reg_6: regn PORT MAP (BusWires, Rin(6), Clock, R6);
+reg_7: regn PORT MAP (BusWires, Rin(7), Clock, R7);
+reg_A: regn PORT MAP (BusWires, Ain, Clock, A);
+reg_g: regn PORT MAP (RESULT, Gin, Clock, G);
+reg_ir:regnl PORT MAP(Din(15 DOWNTO 7),IRIN,Clock,IR);
+ADD_SUB:ALU PORT MAP(ADDSUB,A,BUSWIRES,RESULT,CLOCK);
+MUX1:mux PORT MAP(ROUT,GOUT,DINOUT,R0,R1,R2,R3,R4,R5,R6,R7,G,DIN,BUSWIRES,CLOCK);
+
+PROCESS (Tstep_Q, I, Xreg, Yreg)
+BEGIN
+--. . . specify initial values
+IF(RUN='0')THEN IRin<='0'; Gout<='0'; DINout<='0'; Ain<='0'; 
+AddSub <='0'; Gin<='0';Rin<="00000000"; Rout<="00000000"; Done<='0'; 
+END IF;
+IF(RESETN='0') THEN IRin<='0'; Gout<='0'; DINout<='0'; Ain<='0'; 
+AddSub <='0'; Gin<='0';Rin<="00000000"; Rout<="00000000"; Done<='1'; 
+
+ELSE 
+IRin<='0'; Gout<='0'; DINout<='0'; Ain<='0'; 
+AddSub <='0'; Gin<='0';Rin<="00000000"; Rout<="00000000"; Done<='0'; 
+
+CASE Tstep_Q IS
+WHEN "00" =>     -- store DIN in IR as long as Tstep_Q = 0
+IRin<='1';
+WHEN "01" =>    -- de?ne signals in time step T1
+  CASE I IS
+     WHEN "000" =>                  --mv format
+        ROUT<=YREG;RIN<=XREG;DONE<='1';
+     WHEN "001" =>                  --mvi format
+        RIN<=XREG;DINOUT<='1';DONE<='1';
+     WHEN "010"=>
+        ROUT<=XREG;AIN<='1';
+     WHEN "011"=>
+        ROUT<=XREG;AIN<='1';
+     WHEN OTHERS=>NULL;     
+   END CASE;
+   
+   
+WHEN "10" =>    -- de?ne signals in time step T2
+     CASE I IS
+        WHEN "010"=>
+        ROUT<=YREG;GIN<='1';
+     WHEN "011"=>
+        ROUT<=YREG;GIN<='1';ADDSUB<='1';
+     WHEN OTHERS=>NULL;     
+     END CASE;
+WHEN "11" =>     -- de?ne signals in time step T3
+
+        CASE I IS
+        WHEN "010"=>
+        GOUT<='1';RIN<=XREG;DONE<='1';
+     WHEN "011"=>
+        GOUT<='1';RIN<=XREG;DONE<='1';
+     WHEN OTHERS=>NULL;     
+
+     END CASE;
+END CASE;
+END IF;
+END PROCESS;
+
+
+
+--. . . instantiate other registers and the adder/subtracter unit
+--. . . de?ne the bus
+END Behavior;

@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sat Jan 01 03:02:06 2011
+Quartus II Version : 7.2 Build 151 09/26/2007 SJ Full Version
+Revision Name : jiaoshi
+Top-level Entity Name : jiaoshi
+Family : Cyclone II
+Total logic elements : 208
+    Total combinational functions : 208
+    Dedicated logic registers : 89
+Total registers : 89
+Total pins : 105
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

@@ -1,0 +1,79 @@
+Version 8.1 Build 163 10/28/2008 SJ Full Version
+31
+1926
+OFF
+OFF
+OFF
+OFF
+ON
+ON
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Partition --
+-- End Partition --
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+xor4b
+# storage
+db|xor8b.(1).cnf
+db|xor8b.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+xor4b.vhd
+e954ecc55312bf3678c3ac633efc6e
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+xor4b:inst
+xor4b:inst1
+}
+# lmf
+c:|altera|81|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+xor8b
+# storage
+db|xor8b.(0).cnf
+db|xor8b.(0).cnf
+# case_insensitive
+# source_file
+xor8b.bdf
+2998b9d98b4b67e41b9e35585e8a4564
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# complete
+

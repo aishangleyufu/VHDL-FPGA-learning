@@ -1,0 +1,9 @@
+Fitter Status : Successful - Fri Apr 13 09:10:50 2012
+Quartus II Version : 8.1 Build 163 10/28/2008 SJ Full Version
+Revision Name : xor8b
+Top-level Entity Name : xor8b
+Family : MAX7000S
+Device : EPM7128SLC84-15
+Timing Models : Final
+Total macrocells : 4 / 128 ( 3 % )
+Total pins : 14 / 68 ( 21 % )

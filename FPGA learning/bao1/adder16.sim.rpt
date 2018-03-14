@@ -1,0 +1,327 @@
+Simulator report for adder16
+Thu Dec 10 14:24:53 2015
+Quartus II 64-Bit Version 8.1 Build 163 10/28/2008 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2008 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 10.0 ms      ;
+; Simulation Netlist Size     ; 159 nodes    ;
+; Simulation Coverage         ;      95.60 % ;
+; Total Number of Transitions ; 14228681     ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C70F896C6 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      95.60 % ;
+; Total nodes checked                                 ; 159          ;
+; Total output ports checked                          ; 159          ;
+; Total output ports with complete 1/0-value coverage ; 152          ;
+; Total output ports with no 1/0-value coverage       ; 7            ;
+; Total output ports with no 1-value coverage         ; 7            ;
+; Total output ports with no 0-value coverage         ; 7            ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                            ;
++--------------------------+--------------------------+------------------+
+; Node Name                ; Output Port Name         ; Output Port Type ;
++--------------------------+--------------------------+------------------+
+; |ADDER16|tflip:TA0|Q     ; |ADDER16|tflip:TA0|Q     ; regout           ;
+; |ADDER16|T~0             ; |ADDER16|T~0             ; combout          ;
+; |ADDER16|tflip:TA1|Q     ; |ADDER16|tflip:TA1|Q     ; regout           ;
+; |ADDER16|T~1             ; |ADDER16|T~1             ; combout          ;
+; |ADDER16|tflip:TA2|Q     ; |ADDER16|tflip:TA2|Q     ; regout           ;
+; |ADDER16|T~2             ; |ADDER16|T~2             ; combout          ;
+; |ADDER16|tflip:TA3|Q     ; |ADDER16|tflip:TA3|Q     ; regout           ;
+; |ADDER16|T~3             ; |ADDER16|T~3             ; combout          ;
+; |ADDER16|tflip:TA4|Q     ; |ADDER16|tflip:TA4|Q     ; regout           ;
+; |ADDER16|T~4             ; |ADDER16|T~4             ; combout          ;
+; |ADDER16|tflip:TA5|Q     ; |ADDER16|tflip:TA5|Q     ; regout           ;
+; |ADDER16|T~5             ; |ADDER16|T~5             ; combout          ;
+; |ADDER16|tflip:TA6|Q     ; |ADDER16|tflip:TA6|Q     ; regout           ;
+; |ADDER16|T~6             ; |ADDER16|T~6             ; combout          ;
+; |ADDER16|tflip:TA7|Q     ; |ADDER16|tflip:TA7|Q     ; regout           ;
+; |ADDER16|T~7             ; |ADDER16|T~7             ; combout          ;
+; |ADDER16|tflip:TA8|Q     ; |ADDER16|tflip:TA8|Q     ; regout           ;
+; |ADDER16|T~149           ; |ADDER16|T~149           ; combout          ;
+; |ADDER16|T~8             ; |ADDER16|T~8             ; combout          ;
+; |ADDER16|tflip:TA9|Q     ; |ADDER16|tflip:TA9|Q     ; regout           ;
+; |ADDER16|T~9             ; |ADDER16|T~9             ; combout          ;
+; |ADDER16|tflip:TA10|Q    ; |ADDER16|tflip:TA10|Q    ; regout           ;
+; |ADDER16|T~10            ; |ADDER16|T~10            ; combout          ;
+; |ADDER16|tflip:TA11|Q    ; |ADDER16|tflip:TA11|Q    ; regout           ;
+; |ADDER16|T~11            ; |ADDER16|T~11            ; combout          ;
+; |ADDER16|tflip:TA12|Q    ; |ADDER16|tflip:TA12|Q    ; regout           ;
+; |ADDER16|T~12            ; |ADDER16|T~12            ; combout          ;
+; |ADDER16|tflip:TA13|Q    ; |ADDER16|tflip:TA13|Q    ; regout           ;
+; |ADDER16|T~13            ; |ADDER16|T~13            ; combout          ;
+; |ADDER16|tflip:TA14|Q    ; |ADDER16|tflip:TA14|Q    ; regout           ;
+; |ADDER16|T~14            ; |ADDER16|T~14            ; combout          ;
+; |ADDER16|tflip:TA15|Q    ; |ADDER16|tflip:TA15|Q    ; regout           ;
+; |ADDER16|Mux6~21         ; |ADDER16|Mux6~21         ; combout          ;
+; |ADDER16|Mux5~21         ; |ADDER16|Mux5~21         ; combout          ;
+; |ADDER16|Mux4~19         ; |ADDER16|Mux4~19         ; combout          ;
+; |ADDER16|Mux3~23         ; |ADDER16|Mux3~23         ; combout          ;
+; |ADDER16|Mux2~29         ; |ADDER16|Mux2~29         ; combout          ;
+; |ADDER16|Mux1~25         ; |ADDER16|Mux1~25         ; combout          ;
+; |ADDER16|Mux0~23         ; |ADDER16|Mux0~23         ; combout          ;
+; |ADDER16|Mux13~21        ; |ADDER16|Mux13~21        ; combout          ;
+; |ADDER16|Mux12~21        ; |ADDER16|Mux12~21        ; combout          ;
+; |ADDER16|Mux11~19        ; |ADDER16|Mux11~19        ; combout          ;
+; |ADDER16|Mux10~23        ; |ADDER16|Mux10~23        ; combout          ;
+; |ADDER16|Mux9~29         ; |ADDER16|Mux9~29         ; combout          ;
+; |ADDER16|Mux8~25         ; |ADDER16|Mux8~25         ; combout          ;
+; |ADDER16|Mux7~23         ; |ADDER16|Mux7~23         ; combout          ;
+; |ADDER16|Mux20~21        ; |ADDER16|Mux20~21        ; combout          ;
+; |ADDER16|Mux19~21        ; |ADDER16|Mux19~21        ; combout          ;
+; |ADDER16|Mux18~19        ; |ADDER16|Mux18~19        ; combout          ;
+; |ADDER16|Mux17~23        ; |ADDER16|Mux17~23        ; combout          ;
+; |ADDER16|Mux16~29        ; |ADDER16|Mux16~29        ; combout          ;
+; |ADDER16|Mux15~25        ; |ADDER16|Mux15~25        ; combout          ;
+; |ADDER16|Mux14~23        ; |ADDER16|Mux14~23        ; combout          ;
+; |ADDER16|Mux27~21        ; |ADDER16|Mux27~21        ; combout          ;
+; |ADDER16|Mux26~21        ; |ADDER16|Mux26~21        ; combout          ;
+; |ADDER16|Mux25~19        ; |ADDER16|Mux25~19        ; combout          ;
+; |ADDER16|Mux24~23        ; |ADDER16|Mux24~23        ; combout          ;
+; |ADDER16|Mux23~29        ; |ADDER16|Mux23~29        ; combout          ;
+; |ADDER16|Mux22~25        ; |ADDER16|Mux22~25        ; combout          ;
+; |ADDER16|Mux21~23        ; |ADDER16|Mux21~23        ; combout          ;
+; |ADDER16|tflip:TA0|Q~5   ; |ADDER16|tflip:TA0|Q~5   ; combout          ;
+; |ADDER16|tflip:TA1|Q~21  ; |ADDER16|tflip:TA1|Q~21  ; combout          ;
+; |ADDER16|tflip:TA2|Q~23  ; |ADDER16|tflip:TA2|Q~23  ; combout          ;
+; |ADDER16|tflip:TA3|Q~25  ; |ADDER16|tflip:TA3|Q~25  ; combout          ;
+; |ADDER16|tflip:TA4|Q~27  ; |ADDER16|tflip:TA4|Q~27  ; combout          ;
+; |ADDER16|tflip:TA5|Q~29  ; |ADDER16|tflip:TA5|Q~29  ; combout          ;
+; |ADDER16|tflip:TA6|Q~31  ; |ADDER16|tflip:TA6|Q~31  ; combout          ;
+; |ADDER16|tflip:TA7|Q~33  ; |ADDER16|tflip:TA7|Q~33  ; combout          ;
+; |ADDER16|tflip:TA8|Q~35  ; |ADDER16|tflip:TA8|Q~35  ; combout          ;
+; |ADDER16|tflip:TA9|Q~37  ; |ADDER16|tflip:TA9|Q~37  ; combout          ;
+; |ADDER16|tflip:TA10|Q~39 ; |ADDER16|tflip:TA10|Q~39 ; combout          ;
+; |ADDER16|tflip:TA11|Q~41 ; |ADDER16|tflip:TA11|Q~41 ; combout          ;
+; |ADDER16|tflip:TA12|Q~43 ; |ADDER16|tflip:TA12|Q~43 ; combout          ;
+; |ADDER16|tflip:TA13|Q~45 ; |ADDER16|tflip:TA13|Q~45 ; combout          ;
+; |ADDER16|tflip:TA14|Q~47 ; |ADDER16|tflip:TA14|Q~47 ; combout          ;
+; |ADDER16|tflip:TA15|Q~49 ; |ADDER16|tflip:TA15|Q~49 ; combout          ;
+; |ADDER16|T[1]            ; |ADDER16|T[1]            ; padio            ;
+; |ADDER16|T[2]            ; |ADDER16|T[2]            ; padio            ;
+; |ADDER16|T[3]            ; |ADDER16|T[3]            ; padio            ;
+; |ADDER16|T[4]            ; |ADDER16|T[4]            ; padio            ;
+; |ADDER16|T[5]            ; |ADDER16|T[5]            ; padio            ;
+; |ADDER16|T[6]            ; |ADDER16|T[6]            ; padio            ;
+; |ADDER16|T[7]            ; |ADDER16|T[7]            ; padio            ;
+; |ADDER16|T[8]            ; |ADDER16|T[8]            ; padio            ;
+; |ADDER16|T[9]            ; |ADDER16|T[9]            ; padio            ;
+; |ADDER16|T[10]           ; |ADDER16|T[10]           ; padio            ;
+; |ADDER16|T[11]           ; |ADDER16|T[11]           ; padio            ;
+; |ADDER16|T[12]           ; |ADDER16|T[12]           ; padio            ;
+; |ADDER16|T[13]           ; |ADDER16|T[13]           ; padio            ;
+; |ADDER16|T[14]           ; |ADDER16|T[14]           ; padio            ;
+; |ADDER16|T[15]           ; |ADDER16|T[15]           ; padio            ;
+; |ADDER16|Q[0]            ; |ADDER16|Q[0]            ; padio            ;
+; |ADDER16|Q[1]            ; |ADDER16|Q[1]            ; padio            ;
+; |ADDER16|Q[2]            ; |ADDER16|Q[2]            ; padio            ;
+; |ADDER16|Q[3]            ; |ADDER16|Q[3]            ; padio            ;
+; |ADDER16|Q[4]            ; |ADDER16|Q[4]            ; padio            ;
+; |ADDER16|Q[5]            ; |ADDER16|Q[5]            ; padio            ;
+; |ADDER16|Q[6]            ; |ADDER16|Q[6]            ; padio            ;
+; |ADDER16|Q[7]            ; |ADDER16|Q[7]            ; padio            ;
+; |ADDER16|Q[8]            ; |ADDER16|Q[8]            ; padio            ;
+; |ADDER16|Q[9]            ; |ADDER16|Q[9]            ; padio            ;
+; |ADDER16|Q[10]           ; |ADDER16|Q[10]           ; padio            ;
+; |ADDER16|Q[11]           ; |ADDER16|Q[11]           ; padio            ;
+; |ADDER16|Q[12]           ; |ADDER16|Q[12]           ; padio            ;
+; |ADDER16|Q[13]           ; |ADDER16|Q[13]           ; padio            ;
+; |ADDER16|Q[14]           ; |ADDER16|Q[14]           ; padio            ;
+; |ADDER16|Q[15]           ; |ADDER16|Q[15]           ; padio            ;
+; |ADDER16|C0[0]           ; |ADDER16|C0[0]           ; padio            ;
+; |ADDER16|C0[1]           ; |ADDER16|C0[1]           ; padio            ;
+; |ADDER16|C0[2]           ; |ADDER16|C0[2]           ; padio            ;
+; |ADDER16|C0[3]           ; |ADDER16|C0[3]           ; padio            ;
+; |ADDER16|C0[4]           ; |ADDER16|C0[4]           ; padio            ;
+; |ADDER16|C0[5]           ; |ADDER16|C0[5]           ; padio            ;
+; |ADDER16|C0[6]           ; |ADDER16|C0[6]           ; padio            ;
+; |ADDER16|C1[0]           ; |ADDER16|C1[0]           ; padio            ;
+; |ADDER16|C1[1]           ; |ADDER16|C1[1]           ; padio            ;
+; |ADDER16|C1[2]           ; |ADDER16|C1[2]           ; padio            ;
+; |ADDER16|C1[3]           ; |ADDER16|C1[3]           ; padio            ;
+; |ADDER16|C1[4]           ; |ADDER16|C1[4]           ; padio            ;
+; |ADDER16|C1[5]           ; |ADDER16|C1[5]           ; padio            ;
+; |ADDER16|C1[6]           ; |ADDER16|C1[6]           ; padio            ;
+; |ADDER16|C2[0]           ; |ADDER16|C2[0]           ; padio            ;
+; |ADDER16|C2[1]           ; |ADDER16|C2[1]           ; padio            ;
+; |ADDER16|C2[2]           ; |ADDER16|C2[2]           ; padio            ;
+; |ADDER16|C2[3]           ; |ADDER16|C2[3]           ; padio            ;
+; |ADDER16|C2[4]           ; |ADDER16|C2[4]           ; padio            ;
+; |ADDER16|C2[5]           ; |ADDER16|C2[5]           ; padio            ;
+; |ADDER16|C2[6]           ; |ADDER16|C2[6]           ; padio            ;
+; |ADDER16|C3[0]           ; |ADDER16|C3[0]           ; padio            ;
+; |ADDER16|C3[1]           ; |ADDER16|C3[1]           ; padio            ;
+; |ADDER16|C3[2]           ; |ADDER16|C3[2]           ; padio            ;
+; |ADDER16|C3[3]           ; |ADDER16|C3[3]           ; padio            ;
+; |ADDER16|C3[4]           ; |ADDER16|C3[4]           ; padio            ;
+; |ADDER16|C3[5]           ; |ADDER16|C3[5]           ; padio            ;
+; |ADDER16|C3[6]           ; |ADDER16|C3[6]           ; padio            ;
+; |ADDER16|L0[0]           ; |ADDER16|L0[0]           ; padio            ;
+; |ADDER16|L0[1]           ; |ADDER16|L0[1]           ; padio            ;
+; |ADDER16|L0[2]           ; |ADDER16|L0[2]           ; padio            ;
+; |ADDER16|L0[3]           ; |ADDER16|L0[3]           ; padio            ;
+; |ADDER16|L1[0]           ; |ADDER16|L1[0]           ; padio            ;
+; |ADDER16|L1[1]           ; |ADDER16|L1[1]           ; padio            ;
+; |ADDER16|L1[2]           ; |ADDER16|L1[2]           ; padio            ;
+; |ADDER16|L1[3]           ; |ADDER16|L1[3]           ; padio            ;
+; |ADDER16|L2[0]           ; |ADDER16|L2[0]           ; padio            ;
+; |ADDER16|L2[1]           ; |ADDER16|L2[1]           ; padio            ;
+; |ADDER16|L2[2]           ; |ADDER16|L2[2]           ; padio            ;
+; |ADDER16|L2[3]           ; |ADDER16|L2[3]           ; padio            ;
+; |ADDER16|L3[0]           ; |ADDER16|L3[0]           ; padio            ;
+; |ADDER16|L3[1]           ; |ADDER16|L3[1]           ; padio            ;
+; |ADDER16|L3[2]           ; |ADDER16|L3[2]           ; padio            ;
+; |ADDER16|L3[3]           ; |ADDER16|L3[3]           ; padio            ;
+; |ADDER16|CLK             ; |ADDER16|CLK~corein      ; combout          ;
++--------------------------+--------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++---------------------------------------------------------+
+; Missing 1-Value Coverage                                ;
++----------------+---------------------+------------------+
+; Node Name      ; Output Port Name    ; Output Port Type ;
++----------------+---------------------+------------------+
+; |ADDER16|T[0]  ; |ADDER16|T[0]       ; padio            ;
+; |ADDER16|C0[7] ; |ADDER16|C0[7]      ; padio            ;
+; |ADDER16|C1[7] ; |ADDER16|C1[7]      ; padio            ;
+; |ADDER16|C2[7] ; |ADDER16|C2[7]      ; padio            ;
+; |ADDER16|C3[7] ; |ADDER16|C3[7]      ; padio            ;
+; |ADDER16|ENA   ; |ADDER16|ENA~corein ; combout          ;
+; |ADDER16|CLR   ; |ADDER16|CLR~corein ; combout          ;
++----------------+---------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++---------------------------------------------------------+
+; Missing 0-Value Coverage                                ;
++----------------+---------------------+------------------+
+; Node Name      ; Output Port Name    ; Output Port Type ;
++----------------+---------------------+------------------+
+; |ADDER16|T[0]  ; |ADDER16|T[0]       ; padio            ;
+; |ADDER16|C0[7] ; |ADDER16|C0[7]      ; padio            ;
+; |ADDER16|C1[7] ; |ADDER16|C1[7]      ; padio            ;
+; |ADDER16|C2[7] ; |ADDER16|C2[7]      ; padio            ;
+; |ADDER16|C3[7] ; |ADDER16|C3[7]      ; padio            ;
+; |ADDER16|ENA   ; |ADDER16|ENA~corein ; combout          ;
+; |ADDER16|CLR   ; |ADDER16|CLR~corein ; combout          ;
++----------------+---------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 8.1 Build 163 10/28/2008 SJ Full Version
+    Info: Processing started: Thu Dec 10 14:22:17 2015
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off adder16 -c adder16
+Info: Using vector source file "C:/Users/c/Desktop/bao1/adder16.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      95.60 %
+Info: Number of transitions in simulation is 14228681
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 240 megabytes
+    Info: Processing ended: Thu Dec 10 14:24:53 2015
+    Info: Elapsed time: 00:02:36
+    Info: Total CPU time (on all processors): 00:01:06
+
+

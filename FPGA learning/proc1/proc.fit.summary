@@ -1,0 +1,16 @@
+Fitter Status : Successful - Wed Jan 06 20:09:41 2016
+Quartus II 64-Bit Version : 8.1 Build 163 10/28/2008 SJ Full Version
+Revision Name : proc
+Top-level Entity Name : proc
+Family : Cyclone II
+Device : EP2C70F896C6
+Timing Models : Final
+Total logic elements : 201 / 68,416 ( < 1 % )
+    Total combinational functions : 160 / 68,416 ( < 1 % )
+    Dedicated logic registers : 139 / 68,416 ( < 1 % )
+Total registers : 139
+Total pins : 36 / 622 ( 6 % )
+Total virtual pins : 0
+Total memory bits : 0 / 1,152,000 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 300 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

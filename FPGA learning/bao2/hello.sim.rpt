@@ -1,0 +1,797 @@
+Simulator report for hello
+Thu Dec 10 15:41:44 2015
+Quartus II 64-Bit Version 8.1 Build 163 10/28/2008 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2008 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 10.0 ms      ;
+; Simulation Netlist Size     ; 379 nodes    ;
+; Simulation Coverage         ;      56.46 % ;
+; Total Number of Transitions ; 14482        ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C70F896C6 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      56.46 % ;
+; Total nodes checked                                 ; 379          ;
+; Total output ports checked                          ; 441          ;
+; Total output ports with complete 1/0-value coverage ; 249          ;
+; Total output ports with no 1/0-value coverage       ; 192          ;
+; Total output ports with no 1-value coverage         ; 192          ;
+; Total output ports with no 0-value coverage         ; 192          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                ;
++--------------------+--------------------+------------------+
+; Node Name          ; Output Port Name   ; Output Port Type ;
++--------------------+--------------------+------------------+
+; |hello|Add1~384    ; |hello|Add1~384    ; combout          ;
+; |hello|Add1~384    ; |hello|Add1~385    ; cout             ;
+; |hello|Add1~386    ; |hello|Add1~386    ; combout          ;
+; |hello|Add1~386    ; |hello|Add1~387    ; cout             ;
+; |hello|Add1~388    ; |hello|Add1~388    ; combout          ;
+; |hello|Add1~388    ; |hello|Add1~389    ; cout             ;
+; |hello|Add1~390    ; |hello|Add1~390    ; combout          ;
+; |hello|Add0~384    ; |hello|Add0~384    ; combout          ;
+; |hello|Add0~384    ; |hello|Add0~385    ; cout             ;
+; |hello|Add0~386    ; |hello|Add0~386    ; combout          ;
+; |hello|Add0~386    ; |hello|Add0~387    ; cout             ;
+; |hello|Add0~388    ; |hello|Add0~388    ; combout          ;
+; |hello|L0[2]~reg0  ; |hello|L0[2]~reg0  ; regout           ;
+; |hello|L0[3]~reg0  ; |hello|L0[3]~reg0  ; regout           ;
+; |hello|L0[1]~reg0  ; |hello|L0[1]~reg0  ; regout           ;
+; |hello|Mux27~17    ; |hello|Mux27~17    ; combout          ;
+; |hello|L0[0]~reg0  ; |hello|L0[0]~reg0  ; regout           ;
+; |hello|Mux26~27    ; |hello|Mux26~27    ; combout          ;
+; |hello|Mux24~29    ; |hello|Mux24~29    ; combout          ;
+; |hello|Mux23~33    ; |hello|Mux23~33    ; combout          ;
+; |hello|Mux21~33    ; |hello|Mux21~33    ; combout          ;
+; |hello|L1[0]~reg0  ; |hello|L1[0]~reg0  ; regout           ;
+; |hello|L1[1]~reg0  ; |hello|L1[1]~reg0  ; regout           ;
+; |hello|L1[2]~reg0  ; |hello|L1[2]~reg0  ; regout           ;
+; |hello|L1[3]~reg0  ; |hello|L1[3]~reg0  ; regout           ;
+; |hello|Mux34~33    ; |hello|Mux34~33    ; combout          ;
+; |hello|Mux33~27    ; |hello|Mux33~27    ; combout          ;
+; |hello|Mux31~29    ; |hello|Mux31~29    ; combout          ;
+; |hello|Mux30~17    ; |hello|Mux30~17    ; combout          ;
+; |hello|Mux28~33    ; |hello|Mux28~33    ; combout          ;
+; |hello|L2[2]~reg0  ; |hello|L2[2]~reg0  ; regout           ;
+; |hello|L2[1]~reg0  ; |hello|L2[1]~reg0  ; regout           ;
+; |hello|L2[3]~reg0  ; |hello|L2[3]~reg0  ; regout           ;
+; |hello|Mux41~30    ; |hello|Mux41~30    ; combout          ;
+; |hello|L2[0]~reg0  ; |hello|L2[0]~reg0  ; regout           ;
+; |hello|Mux40~27    ; |hello|Mux40~27    ; combout          ;
+; |hello|Mux38~29    ; |hello|Mux38~29    ; combout          ;
+; |hello|Mux37~17    ; |hello|Mux37~17    ; combout          ;
+; |hello|Mux35~33    ; |hello|Mux35~33    ; combout          ;
+; |hello|L3[0]~reg0  ; |hello|L3[0]~reg0  ; regout           ;
+; |hello|L3[1]~reg0  ; |hello|L3[1]~reg0  ; regout           ;
+; |hello|L3[2]~reg0  ; |hello|L3[2]~reg0  ; regout           ;
+; |hello|L3[3]~reg0  ; |hello|L3[3]~reg0  ; regout           ;
+; |hello|Mux48~33    ; |hello|Mux48~33    ; combout          ;
+; |hello|Mux47~27    ; |hello|Mux47~27    ; combout          ;
+; |hello|Mux45~29    ; |hello|Mux45~29    ; combout          ;
+; |hello|Mux44~30    ; |hello|Mux44~30    ; combout          ;
+; |hello|Mux42~33    ; |hello|Mux42~33    ; combout          ;
+; |hello|L4[0]~reg0  ; |hello|L4[0]~reg0  ; regout           ;
+; |hello|L4[1]~reg0  ; |hello|L4[1]~reg0  ; regout           ;
+; |hello|L4[2]~reg0  ; |hello|L4[2]~reg0  ; regout           ;
+; |hello|L4[3]~reg0  ; |hello|L4[3]~reg0  ; regout           ;
+; |hello|Mux55~33    ; |hello|Mux55~33    ; combout          ;
+; |hello|Mux54~27    ; |hello|Mux54~27    ; combout          ;
+; |hello|Mux52~29    ; |hello|Mux52~29    ; combout          ;
+; |hello|Mux51~33    ; |hello|Mux51~33    ; combout          ;
+; |hello|Mux49~33    ; |hello|Mux49~33    ; combout          ;
+; |hello|L5[0]~reg0  ; |hello|L5[0]~reg0  ; regout           ;
+; |hello|L5[1]~reg0  ; |hello|L5[1]~reg0  ; regout           ;
+; |hello|L5[2]~reg0  ; |hello|L5[2]~reg0  ; regout           ;
+; |hello|L5[3]~reg0  ; |hello|L5[3]~reg0  ; regout           ;
+; |hello|Mux6~33     ; |hello|Mux6~33     ; combout          ;
+; |hello|Mux5~27     ; |hello|Mux5~27     ; combout          ;
+; |hello|Mux3~39     ; |hello|Mux3~39     ; combout          ;
+; |hello|Mux2~17     ; |hello|Mux2~17     ; combout          ;
+; |hello|Mux0~33     ; |hello|Mux0~33     ; combout          ;
+; |hello|L6[1]~reg0  ; |hello|L6[1]~reg0  ; regout           ;
+; |hello|L6[3]~reg0  ; |hello|L6[3]~reg0  ; regout           ;
+; |hello|L6[2]~reg0  ; |hello|L6[2]~reg0  ; regout           ;
+; |hello|Mux13~17    ; |hello|Mux13~17    ; combout          ;
+; |hello|L6[0]~reg0  ; |hello|L6[0]~reg0  ; regout           ;
+; |hello|Mux12~27    ; |hello|Mux12~27    ; combout          ;
+; |hello|Mux10~29    ; |hello|Mux10~29    ; combout          ;
+; |hello|Mux9~31     ; |hello|Mux9~31     ; combout          ;
+; |hello|Mux7~33     ; |hello|Mux7~33     ; combout          ;
+; |hello|L7[0]~reg0  ; |hello|L7[0]~reg0  ; regout           ;
+; |hello|L7[1]~reg0  ; |hello|L7[1]~reg0  ; regout           ;
+; |hello|L7[2]~reg0  ; |hello|L7[2]~reg0  ; regout           ;
+; |hello|L7[3]~reg0  ; |hello|L7[3]~reg0  ; regout           ;
+; |hello|Mux20~33    ; |hello|Mux20~33    ; combout          ;
+; |hello|Mux19~27    ; |hello|Mux19~27    ; combout          ;
+; |hello|Mux17~25    ; |hello|Mux17~25    ; combout          ;
+; |hello|Mux16~30    ; |hello|Mux16~30    ; combout          ;
+; |hello|Mux14~33    ; |hello|Mux14~33    ; combout          ;
+; |hello|var2[3]     ; |hello|var2[3]     ; regout           ;
+; |hello|var2[2]     ; |hello|var2[2]     ; regout           ;
+; |hello|var2[1]     ; |hello|var2[1]     ; regout           ;
+; |hello|var2[0]     ; |hello|var2[0]     ; regout           ;
+; |hello|Equal1~572  ; |hello|Equal1~572  ; combout          ;
+; |hello|Equal1~573  ; |hello|Equal1~573  ; combout          ;
+; |hello|Equal1~575  ; |hello|Equal1~575  ; combout          ;
+; |hello|Equal1~578  ; |hello|Equal1~578  ; combout          ;
+; |hello|var1[2]     ; |hello|var1[2]     ; regout           ;
+; |hello|var1[1]     ; |hello|var1[1]     ; regout           ;
+; |hello|var1[0]     ; |hello|var1[0]     ; regout           ;
+; |hello|Equal0~355  ; |hello|Equal0~355  ; combout          ;
+; |hello|Equal0~356  ; |hello|Equal0~356  ; combout          ;
+; |hello|Equal0~357  ; |hello|Equal0~357  ; combout          ;
+; |hello|Equal0~359  ; |hello|Equal0~359  ; combout          ;
+; |hello|Equal0~362  ; |hello|Equal0~362  ; combout          ;
+; |hello|L0[3]~376   ; |hello|L0[3]~376   ; combout          ;
+; |hello|Add2~131    ; |hello|Add2~131    ; combout          ;
+; |hello|Equal2~31   ; |hello|Equal2~31   ; combout          ;
+; |hello|L0[2]~377   ; |hello|L0[2]~377   ; combout          ;
+; |hello|Add2~132    ; |hello|Add2~132    ; combout          ;
+; |hello|L0[3]~378   ; |hello|L0[3]~378   ; combout          ;
+; |hello|L0[1]~379   ; |hello|L0[1]~379   ; combout          ;
+; |hello|L0[0]~380   ; |hello|L0[0]~380   ; combout          ;
+; |hello|Equal3~31   ; |hello|Equal3~31   ; combout          ;
+; |hello|L1[0]~361   ; |hello|L1[0]~361   ; combout          ;
+; |hello|L1[1]~362   ; |hello|L1[1]~362   ; combout          ;
+; |hello|Add3~131    ; |hello|Add3~131    ; combout          ;
+; |hello|L1[2]~363   ; |hello|L1[2]~363   ; combout          ;
+; |hello|Add3~132    ; |hello|Add3~132    ; combout          ;
+; |hello|L1[3]~364   ; |hello|L1[3]~364   ; combout          ;
+; |hello|Add4~131    ; |hello|Add4~131    ; combout          ;
+; |hello|Equal4~31   ; |hello|Equal4~31   ; combout          ;
+; |hello|L2[2]~361   ; |hello|L2[2]~361   ; combout          ;
+; |hello|L2[1]~362   ; |hello|L2[1]~362   ; combout          ;
+; |hello|Add4~132    ; |hello|Add4~132    ; combout          ;
+; |hello|L2[3]~363   ; |hello|L2[3]~363   ; combout          ;
+; |hello|L2[0]~364   ; |hello|L2[0]~364   ; combout          ;
+; |hello|Equal5~21   ; |hello|Equal5~21   ; combout          ;
+; |hello|L3[0]~361   ; |hello|L3[0]~361   ; combout          ;
+; |hello|L3[1]~362   ; |hello|L3[1]~362   ; combout          ;
+; |hello|Equal5~22   ; |hello|Equal5~22   ; combout          ;
+; |hello|L3[2]~363   ; |hello|L3[2]~363   ; combout          ;
+; |hello|L3[3]~364   ; |hello|L3[3]~364   ; combout          ;
+; |hello|Equal6~21   ; |hello|Equal6~21   ; combout          ;
+; |hello|L4[0]~361   ; |hello|L4[0]~361   ; combout          ;
+; |hello|L4[1]~362   ; |hello|L4[1]~362   ; combout          ;
+; |hello|Equal6~22   ; |hello|Equal6~22   ; combout          ;
+; |hello|L4[2]~363   ; |hello|L4[2]~363   ; combout          ;
+; |hello|L4[3]~364   ; |hello|L4[3]~364   ; combout          ;
+; |hello|Equal7~31   ; |hello|Equal7~31   ; combout          ;
+; |hello|L5[0]~361   ; |hello|L5[0]~361   ; combout          ;
+; |hello|L5[1]~362   ; |hello|L5[1]~362   ; combout          ;
+; |hello|Add7~131    ; |hello|Add7~131    ; combout          ;
+; |hello|L5[2]~363   ; |hello|L5[2]~363   ; combout          ;
+; |hello|Add7~132    ; |hello|Add7~132    ; combout          ;
+; |hello|L5[3]~364   ; |hello|L5[3]~364   ; combout          ;
+; |hello|Equal8~21   ; |hello|Equal8~21   ; combout          ;
+; |hello|L6[1]~361   ; |hello|L6[1]~361   ; combout          ;
+; |hello|Equal8~22   ; |hello|Equal8~22   ; combout          ;
+; |hello|L6[3]~362   ; |hello|L6[3]~362   ; combout          ;
+; |hello|L6[2]~363   ; |hello|L6[2]~363   ; combout          ;
+; |hello|L6[0]~364   ; |hello|L6[0]~364   ; combout          ;
+; |hello|Equal9~21   ; |hello|Equal9~21   ; combout          ;
+; |hello|L7[0]~361   ; |hello|L7[0]~361   ; combout          ;
+; |hello|L7[1]~362   ; |hello|L7[1]~362   ; combout          ;
+; |hello|Equal9~22   ; |hello|Equal9~22   ; combout          ;
+; |hello|L7[2]~363   ; |hello|L7[2]~363   ; combout          ;
+; |hello|L7[3]~364   ; |hello|L7[3]~364   ; combout          ;
+; |hello|Equal0~363  ; |hello|Equal0~363  ; combout          ;
+; |hello|var2~389    ; |hello|var2~389    ; combout          ;
+; |hello|var2~390    ; |hello|var2~390    ; combout          ;
+; |hello|var2~391    ; |hello|var2~391    ; combout          ;
+; |hello|var1~168    ; |hello|var1~168    ; combout          ;
+; |hello|var1[0]~169 ; |hello|var1[0]~169 ; combout          ;
+; |hello|C0[1]       ; |hello|C0[1]       ; padio            ;
+; |hello|C0[2]       ; |hello|C0[2]       ; padio            ;
+; |hello|C0[3]       ; |hello|C0[3]       ; padio            ;
+; |hello|C0[4]       ; |hello|C0[4]       ; padio            ;
+; |hello|C0[5]       ; |hello|C0[5]       ; padio            ;
+; |hello|C0[6]       ; |hello|C0[6]       ; padio            ;
+; |hello|C0[7]       ; |hello|C0[7]       ; padio            ;
+; |hello|C1[1]       ; |hello|C1[1]       ; padio            ;
+; |hello|C1[2]       ; |hello|C1[2]       ; padio            ;
+; |hello|C1[3]       ; |hello|C1[3]       ; padio            ;
+; |hello|C1[4]       ; |hello|C1[4]       ; padio            ;
+; |hello|C1[5]       ; |hello|C1[5]       ; padio            ;
+; |hello|C1[6]       ; |hello|C1[6]       ; padio            ;
+; |hello|C1[7]       ; |hello|C1[7]       ; padio            ;
+; |hello|C2[1]       ; |hello|C2[1]       ; padio            ;
+; |hello|C2[2]       ; |hello|C2[2]       ; padio            ;
+; |hello|C2[3]       ; |hello|C2[3]       ; padio            ;
+; |hello|C2[4]       ; |hello|C2[4]       ; padio            ;
+; |hello|C2[5]       ; |hello|C2[5]       ; padio            ;
+; |hello|C2[6]       ; |hello|C2[6]       ; padio            ;
+; |hello|C2[7]       ; |hello|C2[7]       ; padio            ;
+; |hello|C3[1]       ; |hello|C3[1]       ; padio            ;
+; |hello|C3[2]       ; |hello|C3[2]       ; padio            ;
+; |hello|C3[3]       ; |hello|C3[3]       ; padio            ;
+; |hello|C3[4]       ; |hello|C3[4]       ; padio            ;
+; |hello|C3[5]       ; |hello|C3[5]       ; padio            ;
+; |hello|C3[6]       ; |hello|C3[6]       ; padio            ;
+; |hello|C3[7]       ; |hello|C3[7]       ; padio            ;
+; |hello|C4[1]       ; |hello|C4[1]       ; padio            ;
+; |hello|C4[2]       ; |hello|C4[2]       ; padio            ;
+; |hello|C4[3]       ; |hello|C4[3]       ; padio            ;
+; |hello|C4[4]       ; |hello|C4[4]       ; padio            ;
+; |hello|C4[5]       ; |hello|C4[5]       ; padio            ;
+; |hello|C4[6]       ; |hello|C4[6]       ; padio            ;
+; |hello|C4[7]       ; |hello|C4[7]       ; padio            ;
+; |hello|C5[1]       ; |hello|C5[1]       ; padio            ;
+; |hello|C5[2]       ; |hello|C5[2]       ; padio            ;
+; |hello|C5[3]       ; |hello|C5[3]       ; padio            ;
+; |hello|C5[4]       ; |hello|C5[4]       ; padio            ;
+; |hello|C5[5]       ; |hello|C5[5]       ; padio            ;
+; |hello|C5[6]       ; |hello|C5[6]       ; padio            ;
+; |hello|C5[7]       ; |hello|C5[7]       ; padio            ;
+; |hello|C6[1]       ; |hello|C6[1]       ; padio            ;
+; |hello|C6[2]       ; |hello|C6[2]       ; padio            ;
+; |hello|C6[3]       ; |hello|C6[3]       ; padio            ;
+; |hello|C6[4]       ; |hello|C6[4]       ; padio            ;
+; |hello|C6[5]       ; |hello|C6[5]       ; padio            ;
+; |hello|C6[6]       ; |hello|C6[6]       ; padio            ;
+; |hello|C6[7]       ; |hello|C6[7]       ; padio            ;
+; |hello|C7[1]       ; |hello|C7[1]       ; padio            ;
+; |hello|C7[2]       ; |hello|C7[2]       ; padio            ;
+; |hello|C7[3]       ; |hello|C7[3]       ; padio            ;
+; |hello|C7[4]       ; |hello|C7[4]       ; padio            ;
+; |hello|C7[5]       ; |hello|C7[5]       ; padio            ;
+; |hello|C7[6]       ; |hello|C7[6]       ; padio            ;
+; |hello|C7[7]       ; |hello|C7[7]       ; padio            ;
+; |hello|L7[0]       ; |hello|L7[0]       ; padio            ;
+; |hello|L7[1]       ; |hello|L7[1]       ; padio            ;
+; |hello|L7[2]       ; |hello|L7[2]       ; padio            ;
+; |hello|L7[3]       ; |hello|L7[3]       ; padio            ;
+; |hello|L6[0]       ; |hello|L6[0]       ; padio            ;
+; |hello|L6[1]       ; |hello|L6[1]       ; padio            ;
+; |hello|L6[2]       ; |hello|L6[2]       ; padio            ;
+; |hello|L6[3]       ; |hello|L6[3]       ; padio            ;
+; |hello|L5[0]       ; |hello|L5[0]       ; padio            ;
+; |hello|L5[1]       ; |hello|L5[1]       ; padio            ;
+; |hello|L5[2]       ; |hello|L5[2]       ; padio            ;
+; |hello|L5[3]       ; |hello|L5[3]       ; padio            ;
+; |hello|L4[0]       ; |hello|L4[0]       ; padio            ;
+; |hello|L4[1]       ; |hello|L4[1]       ; padio            ;
+; |hello|L4[2]       ; |hello|L4[2]       ; padio            ;
+; |hello|L4[3]       ; |hello|L4[3]       ; padio            ;
+; |hello|L3[0]       ; |hello|L3[0]       ; padio            ;
+; |hello|L3[1]       ; |hello|L3[1]       ; padio            ;
+; |hello|L3[2]       ; |hello|L3[2]       ; padio            ;
+; |hello|L3[3]       ; |hello|L3[3]       ; padio            ;
+; |hello|L2[0]       ; |hello|L2[0]       ; padio            ;
+; |hello|L2[1]       ; |hello|L2[1]       ; padio            ;
+; |hello|L2[2]       ; |hello|L2[2]       ; padio            ;
+; |hello|L2[3]       ; |hello|L2[3]       ; padio            ;
+; |hello|L1[0]       ; |hello|L1[0]       ; padio            ;
+; |hello|L1[1]       ; |hello|L1[1]       ; padio            ;
+; |hello|L1[2]       ; |hello|L1[2]       ; padio            ;
+; |hello|L1[3]       ; |hello|L1[3]       ; padio            ;
+; |hello|L0[0]       ; |hello|L0[0]       ; padio            ;
+; |hello|L0[1]       ; |hello|L0[1]       ; padio            ;
+; |hello|L0[2]       ; |hello|L0[2]       ; padio            ;
+; |hello|L0[3]       ; |hello|L0[3]       ; padio            ;
+; |hello|CLK         ; |hello|CLK~corein  ; combout          ;
+; |hello|CLK~clkctrl ; |hello|CLK~clkctrl ; outclk           ;
++--------------------+--------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------+
+; Missing 1-Value Coverage                                 ;
++-------------------+-------------------+------------------+
+; Node Name         ; Output Port Name  ; Output Port Type ;
++-------------------+-------------------+------------------+
+; |hello|Add1~390   ; |hello|Add1~391   ; cout             ;
+; |hello|Add1~392   ; |hello|Add1~392   ; combout          ;
+; |hello|Add1~392   ; |hello|Add1~393   ; cout             ;
+; |hello|Add1~394   ; |hello|Add1~394   ; combout          ;
+; |hello|Add1~394   ; |hello|Add1~395   ; cout             ;
+; |hello|Add1~396   ; |hello|Add1~396   ; combout          ;
+; |hello|Add1~396   ; |hello|Add1~397   ; cout             ;
+; |hello|Add1~398   ; |hello|Add1~398   ; combout          ;
+; |hello|Add1~398   ; |hello|Add1~399   ; cout             ;
+; |hello|Add1~400   ; |hello|Add1~400   ; combout          ;
+; |hello|Add1~400   ; |hello|Add1~401   ; cout             ;
+; |hello|Add1~402   ; |hello|Add1~402   ; combout          ;
+; |hello|Add1~402   ; |hello|Add1~403   ; cout             ;
+; |hello|Add1~404   ; |hello|Add1~404   ; combout          ;
+; |hello|Add1~404   ; |hello|Add1~405   ; cout             ;
+; |hello|Add1~406   ; |hello|Add1~406   ; combout          ;
+; |hello|Add1~406   ; |hello|Add1~407   ; cout             ;
+; |hello|Add1~408   ; |hello|Add1~408   ; combout          ;
+; |hello|Add1~408   ; |hello|Add1~409   ; cout             ;
+; |hello|Add1~410   ; |hello|Add1~410   ; combout          ;
+; |hello|Add1~410   ; |hello|Add1~411   ; cout             ;
+; |hello|Add1~412   ; |hello|Add1~412   ; combout          ;
+; |hello|Add1~412   ; |hello|Add1~413   ; cout             ;
+; |hello|Add1~414   ; |hello|Add1~414   ; combout          ;
+; |hello|Add1~414   ; |hello|Add1~415   ; cout             ;
+; |hello|Add1~416   ; |hello|Add1~416   ; combout          ;
+; |hello|Add1~416   ; |hello|Add1~417   ; cout             ;
+; |hello|Add1~418   ; |hello|Add1~418   ; combout          ;
+; |hello|Add1~418   ; |hello|Add1~419   ; cout             ;
+; |hello|Add1~420   ; |hello|Add1~420   ; combout          ;
+; |hello|Add1~420   ; |hello|Add1~421   ; cout             ;
+; |hello|Add1~422   ; |hello|Add1~422   ; combout          ;
+; |hello|Add1~422   ; |hello|Add1~423   ; cout             ;
+; |hello|Add1~424   ; |hello|Add1~424   ; combout          ;
+; |hello|Add1~424   ; |hello|Add1~425   ; cout             ;
+; |hello|Add1~426   ; |hello|Add1~426   ; combout          ;
+; |hello|Add1~426   ; |hello|Add1~427   ; cout             ;
+; |hello|Add1~428   ; |hello|Add1~428   ; combout          ;
+; |hello|Add1~428   ; |hello|Add1~429   ; cout             ;
+; |hello|Add1~430   ; |hello|Add1~430   ; combout          ;
+; |hello|Add1~430   ; |hello|Add1~431   ; cout             ;
+; |hello|Add1~432   ; |hello|Add1~432   ; combout          ;
+; |hello|Add1~432   ; |hello|Add1~433   ; cout             ;
+; |hello|Add1~434   ; |hello|Add1~434   ; combout          ;
+; |hello|Add1~434   ; |hello|Add1~435   ; cout             ;
+; |hello|Add1~436   ; |hello|Add1~436   ; combout          ;
+; |hello|Add1~436   ; |hello|Add1~437   ; cout             ;
+; |hello|Add1~438   ; |hello|Add1~438   ; combout          ;
+; |hello|Add1~438   ; |hello|Add1~439   ; cout             ;
+; |hello|Add1~440   ; |hello|Add1~440   ; combout          ;
+; |hello|Add1~440   ; |hello|Add1~441   ; cout             ;
+; |hello|Add1~442   ; |hello|Add1~442   ; combout          ;
+; |hello|Add1~442   ; |hello|Add1~443   ; cout             ;
+; |hello|Add1~444   ; |hello|Add1~444   ; combout          ;
+; |hello|Add1~444   ; |hello|Add1~445   ; cout             ;
+; |hello|Add1~446   ; |hello|Add1~446   ; combout          ;
+; |hello|Add0~388   ; |hello|Add0~389   ; cout             ;
+; |hello|Add0~390   ; |hello|Add0~390   ; combout          ;
+; |hello|Add0~390   ; |hello|Add0~391   ; cout             ;
+; |hello|Add0~392   ; |hello|Add0~392   ; combout          ;
+; |hello|Add0~392   ; |hello|Add0~393   ; cout             ;
+; |hello|Add0~394   ; |hello|Add0~394   ; combout          ;
+; |hello|Add0~394   ; |hello|Add0~395   ; cout             ;
+; |hello|Add0~396   ; |hello|Add0~396   ; combout          ;
+; |hello|Add0~396   ; |hello|Add0~397   ; cout             ;
+; |hello|Add0~398   ; |hello|Add0~398   ; combout          ;
+; |hello|Add0~398   ; |hello|Add0~399   ; cout             ;
+; |hello|Add0~400   ; |hello|Add0~400   ; combout          ;
+; |hello|Add0~400   ; |hello|Add0~401   ; cout             ;
+; |hello|Add0~402   ; |hello|Add0~402   ; combout          ;
+; |hello|Add0~402   ; |hello|Add0~403   ; cout             ;
+; |hello|Add0~404   ; |hello|Add0~404   ; combout          ;
+; |hello|Add0~404   ; |hello|Add0~405   ; cout             ;
+; |hello|Add0~406   ; |hello|Add0~406   ; combout          ;
+; |hello|Add0~406   ; |hello|Add0~407   ; cout             ;
+; |hello|Add0~408   ; |hello|Add0~408   ; combout          ;
+; |hello|Add0~408   ; |hello|Add0~409   ; cout             ;
+; |hello|Add0~410   ; |hello|Add0~410   ; combout          ;
+; |hello|Add0~410   ; |hello|Add0~411   ; cout             ;
+; |hello|Add0~412   ; |hello|Add0~412   ; combout          ;
+; |hello|Add0~412   ; |hello|Add0~413   ; cout             ;
+; |hello|Add0~414   ; |hello|Add0~414   ; combout          ;
+; |hello|Add0~414   ; |hello|Add0~415   ; cout             ;
+; |hello|Add0~416   ; |hello|Add0~416   ; combout          ;
+; |hello|Add0~416   ; |hello|Add0~417   ; cout             ;
+; |hello|Add0~418   ; |hello|Add0~418   ; combout          ;
+; |hello|Add0~418   ; |hello|Add0~419   ; cout             ;
+; |hello|Add0~420   ; |hello|Add0~420   ; combout          ;
+; |hello|Add0~420   ; |hello|Add0~421   ; cout             ;
+; |hello|Add0~422   ; |hello|Add0~422   ; combout          ;
+; |hello|Add0~422   ; |hello|Add0~423   ; cout             ;
+; |hello|Add0~424   ; |hello|Add0~424   ; combout          ;
+; |hello|Add0~424   ; |hello|Add0~425   ; cout             ;
+; |hello|Add0~426   ; |hello|Add0~426   ; combout          ;
+; |hello|Add0~426   ; |hello|Add0~427   ; cout             ;
+; |hello|Add0~428   ; |hello|Add0~428   ; combout          ;
+; |hello|Add0~428   ; |hello|Add0~429   ; cout             ;
+; |hello|Add0~430   ; |hello|Add0~430   ; combout          ;
+; |hello|Add0~430   ; |hello|Add0~431   ; cout             ;
+; |hello|Add0~432   ; |hello|Add0~432   ; combout          ;
+; |hello|Add0~432   ; |hello|Add0~433   ; cout             ;
+; |hello|Add0~434   ; |hello|Add0~434   ; combout          ;
+; |hello|Add0~434   ; |hello|Add0~435   ; cout             ;
+; |hello|Add0~436   ; |hello|Add0~436   ; combout          ;
+; |hello|Add0~436   ; |hello|Add0~437   ; cout             ;
+; |hello|Add0~438   ; |hello|Add0~438   ; combout          ;
+; |hello|Add0~438   ; |hello|Add0~439   ; cout             ;
+; |hello|Add0~440   ; |hello|Add0~440   ; combout          ;
+; |hello|Add0~440   ; |hello|Add0~441   ; cout             ;
+; |hello|Add0~442   ; |hello|Add0~442   ; combout          ;
+; |hello|Add0~442   ; |hello|Add0~443   ; cout             ;
+; |hello|Add0~444   ; |hello|Add0~444   ; combout          ;
+; |hello|Add0~444   ; |hello|Add0~445   ; cout             ;
+; |hello|Add0~446   ; |hello|Add0~446   ; combout          ;
+; |hello|var2[31]   ; |hello|var2[31]   ; regout           ;
+; |hello|var2[30]   ; |hello|var2[30]   ; regout           ;
+; |hello|var2[29]   ; |hello|var2[29]   ; regout           ;
+; |hello|var2[28]   ; |hello|var2[28]   ; regout           ;
+; |hello|var2[27]   ; |hello|var2[27]   ; regout           ;
+; |hello|var2[26]   ; |hello|var2[26]   ; regout           ;
+; |hello|var2[25]   ; |hello|var2[25]   ; regout           ;
+; |hello|var2[24]   ; |hello|var2[24]   ; regout           ;
+; |hello|var2[23]   ; |hello|var2[23]   ; regout           ;
+; |hello|var2[22]   ; |hello|var2[22]   ; regout           ;
+; |hello|var2[21]   ; |hello|var2[21]   ; regout           ;
+; |hello|var2[20]   ; |hello|var2[20]   ; regout           ;
+; |hello|var2[19]   ; |hello|var2[19]   ; regout           ;
+; |hello|var2[18]   ; |hello|var2[18]   ; regout           ;
+; |hello|var2[17]   ; |hello|var2[17]   ; regout           ;
+; |hello|var2[16]   ; |hello|var2[16]   ; regout           ;
+; |hello|var2[15]   ; |hello|var2[15]   ; regout           ;
+; |hello|var2[14]   ; |hello|var2[14]   ; regout           ;
+; |hello|var2[13]   ; |hello|var2[13]   ; regout           ;
+; |hello|var2[12]   ; |hello|var2[12]   ; regout           ;
+; |hello|var2[11]   ; |hello|var2[11]   ; regout           ;
+; |hello|var2[10]   ; |hello|var2[10]   ; regout           ;
+; |hello|var2[9]    ; |hello|var2[9]    ; regout           ;
+; |hello|var2[8]    ; |hello|var2[8]    ; regout           ;
+; |hello|var2[7]    ; |hello|var2[7]    ; regout           ;
+; |hello|var2[6]    ; |hello|var2[6]    ; regout           ;
+; |hello|var2[5]    ; |hello|var2[5]    ; regout           ;
+; |hello|var2[4]    ; |hello|var2[4]    ; regout           ;
+; |hello|Equal1~569 ; |hello|Equal1~569 ; combout          ;
+; |hello|Equal1~570 ; |hello|Equal1~570 ; combout          ;
+; |hello|Equal1~571 ; |hello|Equal1~571 ; combout          ;
+; |hello|Equal1~574 ; |hello|Equal1~574 ; combout          ;
+; |hello|Equal1~576 ; |hello|Equal1~576 ; combout          ;
+; |hello|Equal1~577 ; |hello|Equal1~577 ; combout          ;
+; |hello|var1[31]   ; |hello|var1[31]   ; regout           ;
+; |hello|var1[30]   ; |hello|var1[30]   ; regout           ;
+; |hello|var1[29]   ; |hello|var1[29]   ; regout           ;
+; |hello|var1[28]   ; |hello|var1[28]   ; regout           ;
+; |hello|var1[27]   ; |hello|var1[27]   ; regout           ;
+; |hello|var1[26]   ; |hello|var1[26]   ; regout           ;
+; |hello|var1[25]   ; |hello|var1[25]   ; regout           ;
+; |hello|var1[24]   ; |hello|var1[24]   ; regout           ;
+; |hello|var1[23]   ; |hello|var1[23]   ; regout           ;
+; |hello|var1[22]   ; |hello|var1[22]   ; regout           ;
+; |hello|var1[21]   ; |hello|var1[21]   ; regout           ;
+; |hello|var1[20]   ; |hello|var1[20]   ; regout           ;
+; |hello|var1[19]   ; |hello|var1[19]   ; regout           ;
+; |hello|var1[18]   ; |hello|var1[18]   ; regout           ;
+; |hello|var1[17]   ; |hello|var1[17]   ; regout           ;
+; |hello|var1[16]   ; |hello|var1[16]   ; regout           ;
+; |hello|var1[15]   ; |hello|var1[15]   ; regout           ;
+; |hello|var1[14]   ; |hello|var1[14]   ; regout           ;
+; |hello|var1[13]   ; |hello|var1[13]   ; regout           ;
+; |hello|var1[12]   ; |hello|var1[12]   ; regout           ;
+; |hello|var1[11]   ; |hello|var1[11]   ; regout           ;
+; |hello|var1[10]   ; |hello|var1[10]   ; regout           ;
+; |hello|var1[9]    ; |hello|var1[9]    ; regout           ;
+; |hello|var1[8]    ; |hello|var1[8]    ; regout           ;
+; |hello|var1[7]    ; |hello|var1[7]    ; regout           ;
+; |hello|var1[6]    ; |hello|var1[6]    ; regout           ;
+; |hello|var1[5]    ; |hello|var1[5]    ; regout           ;
+; |hello|var1[4]    ; |hello|var1[4]    ; regout           ;
+; |hello|var1[3]    ; |hello|var1[3]    ; regout           ;
+; |hello|Equal0~352 ; |hello|Equal0~352 ; combout          ;
+; |hello|Equal0~353 ; |hello|Equal0~353 ; combout          ;
+; |hello|Equal0~354 ; |hello|Equal0~354 ; combout          ;
+; |hello|Equal0~358 ; |hello|Equal0~358 ; combout          ;
+; |hello|Equal0~360 ; |hello|Equal0~360 ; combout          ;
+; |hello|Equal0~361 ; |hello|Equal0~361 ; combout          ;
+; |hello|P          ; |hello|P          ; padio            ;
+; |hello|C0[0]      ; |hello|C0[0]      ; padio            ;
+; |hello|C1[0]      ; |hello|C1[0]      ; padio            ;
+; |hello|C2[0]      ; |hello|C2[0]      ; padio            ;
+; |hello|C3[0]      ; |hello|C3[0]      ; padio            ;
+; |hello|C4[0]      ; |hello|C4[0]      ; padio            ;
+; |hello|C5[0]      ; |hello|C5[0]      ; padio            ;
+; |hello|C6[0]      ; |hello|C6[0]      ; padio            ;
+; |hello|C7[0]      ; |hello|C7[0]      ; padio            ;
++-------------------+-------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------+
+; Missing 0-Value Coverage                                 ;
++-------------------+-------------------+------------------+
+; Node Name         ; Output Port Name  ; Output Port Type ;
++-------------------+-------------------+------------------+
+; |hello|Add1~390   ; |hello|Add1~391   ; cout             ;
+; |hello|Add1~392   ; |hello|Add1~392   ; combout          ;
+; |hello|Add1~392   ; |hello|Add1~393   ; cout             ;
+; |hello|Add1~394   ; |hello|Add1~394   ; combout          ;
+; |hello|Add1~394   ; |hello|Add1~395   ; cout             ;
+; |hello|Add1~396   ; |hello|Add1~396   ; combout          ;
+; |hello|Add1~396   ; |hello|Add1~397   ; cout             ;
+; |hello|Add1~398   ; |hello|Add1~398   ; combout          ;
+; |hello|Add1~398   ; |hello|Add1~399   ; cout             ;
+; |hello|Add1~400   ; |hello|Add1~400   ; combout          ;
+; |hello|Add1~400   ; |hello|Add1~401   ; cout             ;
+; |hello|Add1~402   ; |hello|Add1~402   ; combout          ;
+; |hello|Add1~402   ; |hello|Add1~403   ; cout             ;
+; |hello|Add1~404   ; |hello|Add1~404   ; combout          ;
+; |hello|Add1~404   ; |hello|Add1~405   ; cout             ;
+; |hello|Add1~406   ; |hello|Add1~406   ; combout          ;
+; |hello|Add1~406   ; |hello|Add1~407   ; cout             ;
+; |hello|Add1~408   ; |hello|Add1~408   ; combout          ;
+; |hello|Add1~408   ; |hello|Add1~409   ; cout             ;
+; |hello|Add1~410   ; |hello|Add1~410   ; combout          ;
+; |hello|Add1~410   ; |hello|Add1~411   ; cout             ;
+; |hello|Add1~412   ; |hello|Add1~412   ; combout          ;
+; |hello|Add1~412   ; |hello|Add1~413   ; cout             ;
+; |hello|Add1~414   ; |hello|Add1~414   ; combout          ;
+; |hello|Add1~414   ; |hello|Add1~415   ; cout             ;
+; |hello|Add1~416   ; |hello|Add1~416   ; combout          ;
+; |hello|Add1~416   ; |hello|Add1~417   ; cout             ;
+; |hello|Add1~418   ; |hello|Add1~418   ; combout          ;
+; |hello|Add1~418   ; |hello|Add1~419   ; cout             ;
+; |hello|Add1~420   ; |hello|Add1~420   ; combout          ;
+; |hello|Add1~420   ; |hello|Add1~421   ; cout             ;
+; |hello|Add1~422   ; |hello|Add1~422   ; combout          ;
+; |hello|Add1~422   ; |hello|Add1~423   ; cout             ;
+; |hello|Add1~424   ; |hello|Add1~424   ; combout          ;
+; |hello|Add1~424   ; |hello|Add1~425   ; cout             ;
+; |hello|Add1~426   ; |hello|Add1~426   ; combout          ;
+; |hello|Add1~426   ; |hello|Add1~427   ; cout             ;
+; |hello|Add1~428   ; |hello|Add1~428   ; combout          ;
+; |hello|Add1~428   ; |hello|Add1~429   ; cout             ;
+; |hello|Add1~430   ; |hello|Add1~430   ; combout          ;
+; |hello|Add1~430   ; |hello|Add1~431   ; cout             ;
+; |hello|Add1~432   ; |hello|Add1~432   ; combout          ;
+; |hello|Add1~432   ; |hello|Add1~433   ; cout             ;
+; |hello|Add1~434   ; |hello|Add1~434   ; combout          ;
+; |hello|Add1~434   ; |hello|Add1~435   ; cout             ;
+; |hello|Add1~436   ; |hello|Add1~436   ; combout          ;
+; |hello|Add1~436   ; |hello|Add1~437   ; cout             ;
+; |hello|Add1~438   ; |hello|Add1~438   ; combout          ;
+; |hello|Add1~438   ; |hello|Add1~439   ; cout             ;
+; |hello|Add1~440   ; |hello|Add1~440   ; combout          ;
+; |hello|Add1~440   ; |hello|Add1~441   ; cout             ;
+; |hello|Add1~442   ; |hello|Add1~442   ; combout          ;
+; |hello|Add1~442   ; |hello|Add1~443   ; cout             ;
+; |hello|Add1~444   ; |hello|Add1~444   ; combout          ;
+; |hello|Add1~444   ; |hello|Add1~445   ; cout             ;
+; |hello|Add1~446   ; |hello|Add1~446   ; combout          ;
+; |hello|Add0~388   ; |hello|Add0~389   ; cout             ;
+; |hello|Add0~390   ; |hello|Add0~390   ; combout          ;
+; |hello|Add0~390   ; |hello|Add0~391   ; cout             ;
+; |hello|Add0~392   ; |hello|Add0~392   ; combout          ;
+; |hello|Add0~392   ; |hello|Add0~393   ; cout             ;
+; |hello|Add0~394   ; |hello|Add0~394   ; combout          ;
+; |hello|Add0~394   ; |hello|Add0~395   ; cout             ;
+; |hello|Add0~396   ; |hello|Add0~396   ; combout          ;
+; |hello|Add0~396   ; |hello|Add0~397   ; cout             ;
+; |hello|Add0~398   ; |hello|Add0~398   ; combout          ;
+; |hello|Add0~398   ; |hello|Add0~399   ; cout             ;
+; |hello|Add0~400   ; |hello|Add0~400   ; combout          ;
+; |hello|Add0~400   ; |hello|Add0~401   ; cout             ;
+; |hello|Add0~402   ; |hello|Add0~402   ; combout          ;
+; |hello|Add0~402   ; |hello|Add0~403   ; cout             ;
+; |hello|Add0~404   ; |hello|Add0~404   ; combout          ;
+; |hello|Add0~404   ; |hello|Add0~405   ; cout             ;
+; |hello|Add0~406   ; |hello|Add0~406   ; combout          ;
+; |hello|Add0~406   ; |hello|Add0~407   ; cout             ;
+; |hello|Add0~408   ; |hello|Add0~408   ; combout          ;
+; |hello|Add0~408   ; |hello|Add0~409   ; cout             ;
+; |hello|Add0~410   ; |hello|Add0~410   ; combout          ;
+; |hello|Add0~410   ; |hello|Add0~411   ; cout             ;
+; |hello|Add0~412   ; |hello|Add0~412   ; combout          ;
+; |hello|Add0~412   ; |hello|Add0~413   ; cout             ;
+; |hello|Add0~414   ; |hello|Add0~414   ; combout          ;
+; |hello|Add0~414   ; |hello|Add0~415   ; cout             ;
+; |hello|Add0~416   ; |hello|Add0~416   ; combout          ;
+; |hello|Add0~416   ; |hello|Add0~417   ; cout             ;
+; |hello|Add0~418   ; |hello|Add0~418   ; combout          ;
+; |hello|Add0~418   ; |hello|Add0~419   ; cout             ;
+; |hello|Add0~420   ; |hello|Add0~420   ; combout          ;
+; |hello|Add0~420   ; |hello|Add0~421   ; cout             ;
+; |hello|Add0~422   ; |hello|Add0~422   ; combout          ;
+; |hello|Add0~422   ; |hello|Add0~423   ; cout             ;
+; |hello|Add0~424   ; |hello|Add0~424   ; combout          ;
+; |hello|Add0~424   ; |hello|Add0~425   ; cout             ;
+; |hello|Add0~426   ; |hello|Add0~426   ; combout          ;
+; |hello|Add0~426   ; |hello|Add0~427   ; cout             ;
+; |hello|Add0~428   ; |hello|Add0~428   ; combout          ;
+; |hello|Add0~428   ; |hello|Add0~429   ; cout             ;
+; |hello|Add0~430   ; |hello|Add0~430   ; combout          ;
+; |hello|Add0~430   ; |hello|Add0~431   ; cout             ;
+; |hello|Add0~432   ; |hello|Add0~432   ; combout          ;
+; |hello|Add0~432   ; |hello|Add0~433   ; cout             ;
+; |hello|Add0~434   ; |hello|Add0~434   ; combout          ;
+; |hello|Add0~434   ; |hello|Add0~435   ; cout             ;
+; |hello|Add0~436   ; |hello|Add0~436   ; combout          ;
+; |hello|Add0~436   ; |hello|Add0~437   ; cout             ;
+; |hello|Add0~438   ; |hello|Add0~438   ; combout          ;
+; |hello|Add0~438   ; |hello|Add0~439   ; cout             ;
+; |hello|Add0~440   ; |hello|Add0~440   ; combout          ;
+; |hello|Add0~440   ; |hello|Add0~441   ; cout             ;
+; |hello|Add0~442   ; |hello|Add0~442   ; combout          ;
+; |hello|Add0~442   ; |hello|Add0~443   ; cout             ;
+; |hello|Add0~444   ; |hello|Add0~444   ; combout          ;
+; |hello|Add0~444   ; |hello|Add0~445   ; cout             ;
+; |hello|Add0~446   ; |hello|Add0~446   ; combout          ;
+; |hello|var2[31]   ; |hello|var2[31]   ; regout           ;
+; |hello|var2[30]   ; |hello|var2[30]   ; regout           ;
+; |hello|var2[29]   ; |hello|var2[29]   ; regout           ;
+; |hello|var2[28]   ; |hello|var2[28]   ; regout           ;
+; |hello|var2[27]   ; |hello|var2[27]   ; regout           ;
+; |hello|var2[26]   ; |hello|var2[26]   ; regout           ;
+; |hello|var2[25]   ; |hello|var2[25]   ; regout           ;
+; |hello|var2[24]   ; |hello|var2[24]   ; regout           ;
+; |hello|var2[23]   ; |hello|var2[23]   ; regout           ;
+; |hello|var2[22]   ; |hello|var2[22]   ; regout           ;
+; |hello|var2[21]   ; |hello|var2[21]   ; regout           ;
+; |hello|var2[20]   ; |hello|var2[20]   ; regout           ;
+; |hello|var2[19]   ; |hello|var2[19]   ; regout           ;
+; |hello|var2[18]   ; |hello|var2[18]   ; regout           ;
+; |hello|var2[17]   ; |hello|var2[17]   ; regout           ;
+; |hello|var2[16]   ; |hello|var2[16]   ; regout           ;
+; |hello|var2[15]   ; |hello|var2[15]   ; regout           ;
+; |hello|var2[14]   ; |hello|var2[14]   ; regout           ;
+; |hello|var2[13]   ; |hello|var2[13]   ; regout           ;
+; |hello|var2[12]   ; |hello|var2[12]   ; regout           ;
+; |hello|var2[11]   ; |hello|var2[11]   ; regout           ;
+; |hello|var2[10]   ; |hello|var2[10]   ; regout           ;
+; |hello|var2[9]    ; |hello|var2[9]    ; regout           ;
+; |hello|var2[8]    ; |hello|var2[8]    ; regout           ;
+; |hello|var2[7]    ; |hello|var2[7]    ; regout           ;
+; |hello|var2[6]    ; |hello|var2[6]    ; regout           ;
+; |hello|var2[5]    ; |hello|var2[5]    ; regout           ;
+; |hello|var2[4]    ; |hello|var2[4]    ; regout           ;
+; |hello|Equal1~569 ; |hello|Equal1~569 ; combout          ;
+; |hello|Equal1~570 ; |hello|Equal1~570 ; combout          ;
+; |hello|Equal1~571 ; |hello|Equal1~571 ; combout          ;
+; |hello|Equal1~574 ; |hello|Equal1~574 ; combout          ;
+; |hello|Equal1~576 ; |hello|Equal1~576 ; combout          ;
+; |hello|Equal1~577 ; |hello|Equal1~577 ; combout          ;
+; |hello|var1[31]   ; |hello|var1[31]   ; regout           ;
+; |hello|var1[30]   ; |hello|var1[30]   ; regout           ;
+; |hello|var1[29]   ; |hello|var1[29]   ; regout           ;
+; |hello|var1[28]   ; |hello|var1[28]   ; regout           ;
+; |hello|var1[27]   ; |hello|var1[27]   ; regout           ;
+; |hello|var1[26]   ; |hello|var1[26]   ; regout           ;
+; |hello|var1[25]   ; |hello|var1[25]   ; regout           ;
+; |hello|var1[24]   ; |hello|var1[24]   ; regout           ;
+; |hello|var1[23]   ; |hello|var1[23]   ; regout           ;
+; |hello|var1[22]   ; |hello|var1[22]   ; regout           ;
+; |hello|var1[21]   ; |hello|var1[21]   ; regout           ;
+; |hello|var1[20]   ; |hello|var1[20]   ; regout           ;
+; |hello|var1[19]   ; |hello|var1[19]   ; regout           ;
+; |hello|var1[18]   ; |hello|var1[18]   ; regout           ;
+; |hello|var1[17]   ; |hello|var1[17]   ; regout           ;
+; |hello|var1[16]   ; |hello|var1[16]   ; regout           ;
+; |hello|var1[15]   ; |hello|var1[15]   ; regout           ;
+; |hello|var1[14]   ; |hello|var1[14]   ; regout           ;
+; |hello|var1[13]   ; |hello|var1[13]   ; regout           ;
+; |hello|var1[12]   ; |hello|var1[12]   ; regout           ;
+; |hello|var1[11]   ; |hello|var1[11]   ; regout           ;
+; |hello|var1[10]   ; |hello|var1[10]   ; regout           ;
+; |hello|var1[9]    ; |hello|var1[9]    ; regout           ;
+; |hello|var1[8]    ; |hello|var1[8]    ; regout           ;
+; |hello|var1[7]    ; |hello|var1[7]    ; regout           ;
+; |hello|var1[6]    ; |hello|var1[6]    ; regout           ;
+; |hello|var1[5]    ; |hello|var1[5]    ; regout           ;
+; |hello|var1[4]    ; |hello|var1[4]    ; regout           ;
+; |hello|var1[3]    ; |hello|var1[3]    ; regout           ;
+; |hello|Equal0~352 ; |hello|Equal0~352 ; combout          ;
+; |hello|Equal0~353 ; |hello|Equal0~353 ; combout          ;
+; |hello|Equal0~354 ; |hello|Equal0~354 ; combout          ;
+; |hello|Equal0~358 ; |hello|Equal0~358 ; combout          ;
+; |hello|Equal0~360 ; |hello|Equal0~360 ; combout          ;
+; |hello|Equal0~361 ; |hello|Equal0~361 ; combout          ;
+; |hello|P          ; |hello|P          ; padio            ;
+; |hello|C0[0]      ; |hello|C0[0]      ; padio            ;
+; |hello|C1[0]      ; |hello|C1[0]      ; padio            ;
+; |hello|C2[0]      ; |hello|C2[0]      ; padio            ;
+; |hello|C3[0]      ; |hello|C3[0]      ; padio            ;
+; |hello|C4[0]      ; |hello|C4[0]      ; padio            ;
+; |hello|C5[0]      ; |hello|C5[0]      ; padio            ;
+; |hello|C6[0]      ; |hello|C6[0]      ; padio            ;
+; |hello|C7[0]      ; |hello|C7[0]      ; padio            ;
++-------------------+-------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 8.1 Build 163 10/28/2008 SJ Full Version
+    Info: Processing started: Thu Dec 10 15:40:16 2015
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off hello -c hello
+Info: Using vector source file "C:/Users/c/Desktop/bao2/hello.vwf"
+Info: Inverted registers were found during simulation
+    Info: Register: |hello|var2[0]
+    Info: Register: |hello|var1[0]
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      56.46 %
+Info: Number of transitions in simulation is 14482
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 201 megabytes
+    Info: Processing ended: Thu Dec 10 15:41:44 2015
+    Info: Elapsed time: 00:01:28
+    Info: Total CPU time (on all processors): 00:00:00
+
+

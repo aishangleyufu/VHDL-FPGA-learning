@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Jan 06 20:08:42 2016
+Quartus II 64-Bit Version : 8.1 Build 163 10/28/2008 SJ Full Version
+Revision Name : proc
+Top-level Entity Name : proc
+Family : Cyclone II
+Total logic elements : 160
+    Total combinational functions : 160
+    Dedicated logic registers : 139
+Total registers : 139
+Total pins : 36
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
